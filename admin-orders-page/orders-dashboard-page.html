@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Last 20 Orders</title>
+  <link rel="icon" href="../../images/pet-shop.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="orders-dashboard-style.css">
+ 
+</head>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-orange">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./../admin/admin.html"><i class="fa-solid fa-paw me-2"></i>Pet Shop Admin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-bone me-1"></i>Manage Products
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="../admin/admin.html">View Products</a></li>
+              <li><a class="dropdown-item" href="./../admin/admin.html">Add Product</a></li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="./../admin/admin.html/#admins" id="adminsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-users me-1"></i>Manage Admins
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="./../admin/admin.html/#admins">View Admins</a></li>
+            </ul>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-shopping-cart me-1"></i>User Orders</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" id="logoutBtn2"><i class="fa-solid fa-sign-out-alt me-1"></i>Logout</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="body2">
+<body class="min-h-screen flex items-center justify-center">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
+    <h1 class="text-2xl font-bold mb-4 text-center">Admin Dashboard - User Orders</h1>
+    
+ 
+    <div class="mb-4">
+      <label for="userSelect" class="block text-sm font-medium text-gray-700">Select User:</label>
+      <select id="userSelect" class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+        <option value="">Select a user</option>
+      </select>
+    </div>
+
+ 
+    <div class="table-container">
+      <table class="min-w-full bg-white border">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border-b">Product Name</th>
+            <th class="py-2 px-4 border-b">Quantity</th>
+            <th class="py-2 px-4 border-b">Price</th>
+            <th class="py-2 px-4 border-b">Status</th>
+          </tr>
+        </thead>
+        <tbody id="ordersTableBody">
+          <tr>
+            <td colspan="4" class="py-2 px-4 text-center text-gray-500">Select a user to view orders</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
+  
+  <script type= "module" src="orders-dashboard-page.js"></script>
+  <script type="module" src="./../admin/admin.js"></script>
+  
+</body>
+</html>

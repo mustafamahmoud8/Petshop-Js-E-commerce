@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details — PetShop</title>
+    <link rel="icon" href="../images/pet-shop.png" type="image/png">
+    <link rel="stylesheet" href="productdetials.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="../index.html" class="back-btn" title="Back to Shop">
+      <ion-icon name="arrow-back-outline"></ion-icon> Back to Shop
+    </a>
+
+    <section class="main-wrap">
+        <div class="product">
+            <div class="image-gallery">
+                <img src="./img/product-1.jpg" id="productImg" alt="Product Image">
+                <div class="arrow left-arrow">&#10094;</div>
+                <div class="arrow right-arrow">&#10095;</div>
+            </div>
+            <div class="product-details">
+                <div class="details">
+                    <!-- Product info injected by JS -->
+                </div>
+
+                <div class="quantity">
+                    <div class="select-quantity">
+                        <h3>Quantity:</h3>
+                        <input type="number" name="quantity" value="1" min="1" max="99">
+                    </div>
+                </div>
+                <div class="sub-btn">
+                    <button class="submit" id="buyNowBtn">
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="productdetials.js" type="module"></script>
+</body>
+</html>

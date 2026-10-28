@@ -1,0 +1,249 @@
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f0f4f0;
+    }
+
+    header {
+  background-image: url("img/heder.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  border-radius: 8px;
+
+}
+.cart-header {
+  max-width: 1000px;
+  margin: 20px auto 0 auto;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.cart-header h1 {
+  font-size:40px;
+  margin: 0;
+  color: #2a7a2a;
+}
+
+    .close-btn {
+      position: fixed;
+      top: 18px;
+      left: 18px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      background: #2a7a2a;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-weight: bold;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+
+    .close-btn:hover {
+      background: #1e5c1e;
+    }
+
+    .cart {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background: #f2f2f2;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .item-cell {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .item-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .quantity-controls button {
+      width: 28px;
+      height: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      background: #f5f5f5;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    .quantity-controls button:hover {
+      background: #ddd;
+    }
+
+    .delete-btn {
+      margin-left: 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+
+    .delete-btn:hover {
+      transform: scale(1.2);
+    }
+
+    .subtotal-checkout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding: 16px;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .subtotal-text {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .go-checkout {
+      background: #2a7a2a;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 28px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .go-checkout:hover {
+      background: #1e5c1e;
+      transform: scale(1.03);
+    }
+
+    .empty-cart {
+      text-align: center;
+      margin: 50px auto;
+    }
+
+    .empty-cart img {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .empty-cart p {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .empty-cart button {
+      background: #2a7a2a;
+      padding: 12px 30px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .empty-cart button:hover {
+      background: #1e5c1e;
+    }
+
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .subtotal-checkout {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+      th, td {
+        padding: 10px 8px;
+        font-size: 14px;
+      }
+      .cart-header h1 {
+        font-size: 28px;
+      }
+    }
+
+.cute-dogs {
+  position: fixed;
+  bottom: 0px;
+  right: -60px;
+  width: 350px;
+  z-index: 100;
+  animation: float 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cute-dogs img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .cute-dogs {
+    width: 200px;
+    right: -20px;
+  }
+}
